@@ -1,0 +1,21 @@
+<%- include("../partials/header"); %>
+    <div class="mx-auto mt-5" style="width: 425px;">
+        <h1>Login</h1>
+        <% if (messages.error) { %>
+            <div class="alert alert-danger">
+                <%= messages.error %> 
+            </div>
+        <% } %>
+        <form action="/auth/login" method="post">
+            <div class="mb-3">
+                <label for="user-code" class="form-label">Usercode</label>
+                <input type="text" class="form-control" id="user-code" name="usercode" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-outline-primary">Login</button>
+        </form>
+    </div>
+<%- include("../partials/footer"); %>

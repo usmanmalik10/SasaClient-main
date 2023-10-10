@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+  <a class="navbar-brand" href="/">Sasa Client</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item <%= url === '/orders/fixordercompletetime' ? 'active' : ''%>">
+        <a class="nav-link" href="/orders/fixordercompletetime">Complete Time Update</a>
+      </li>
+      <li class="nav-item <%= url === '/orders/showorderdetailsform' ? 'active' : ''%>">
+        <a class="nav-link" href="/orders/showorderdetailsform">Order Details</a>
+      </li>
+    </ul>
+    <form action="/auth/logout?_method=DELETE" method="post" class="form-inline my-2 my-lg-0">
+      <button type="submit" class="btn btn-outline-secondary">Logout</button>
+    </form>
+  </div>
+</nav>

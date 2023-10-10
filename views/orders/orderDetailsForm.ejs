@@ -1,0 +1,13 @@
+<%- include("../partials/header"); %> <%- include("../partials/navbar"); %>
+<div class="mx-auto mt-5" style="width: 800px">
+  <h1>Get Order Details</h1>
+  <%- include("../partials/mainMessage") %>
+  <form action="/orders/getorderdetails" method="get">
+    <div class="mb-3">
+      <label for="orderid" class="form-label">IDs | Comma Separated</label>
+      <textarea class="form-control" id="orderid" name="ids" required rows="10"></textarea>
+    </div>
+    <button type="submit" class="btn btn-outline-primary">Process</button>
+  </form>
+</div>
+<%- include("../partials/footer"); %>

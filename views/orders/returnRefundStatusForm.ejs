@@ -1,0 +1,31 @@
+<%- include("../partials/header"); %> <%- include("../partials/navbar"); %>
+<div class="mx-auto mt-5" style="width: 800px" ng-controller="returnRefundCtrl">
+  <h1>Get Return Refund Status</h1>
+  <%- include("../partials/mainMessage") %>
+  <form action="/orders/getreturnrefundstatuses" method="get">
+    <div class="mb-3">
+      <label for="start-date" class="form-label">Create Time From</label>
+      <input
+        type="date"
+        class="form-control"
+        id="start-date"
+        name="start_date"
+        required
+        ng-model="startDate"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="end-date" class="form-label">Create Time To</label>
+      <input
+        type="date"
+        class="form-control"
+        id="end-date"
+        name="end_date"
+        required
+        ng-model="endDate"
+      />
+    </div>
+    <button type="submit" class="btn btn-outline-primary d-block">Process</button>
+  </form>
+</div>
+<%- include("../partials/footer"); %>
